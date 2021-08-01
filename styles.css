@@ -1,0 +1,71 @@
+body{
+    background-color: black;
+}
+
+.game-container{
+    margin-top: 5%;
+    margin-left: 32%;
+    margin-right: 32%;
+}
+
+.flex-row {
+    display: inline-flex;
+    justify-content: center;
+    width: 680px;
+    height: 190px;
+}
+
+.item{
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 200px;
+    font-family: monospace;
+}
+
+.item:hover{
+    background-color: gray;
+}
+
+.top-left{
+    border-bottom: solid white;
+    border-right: solid white;
+}
+
+.top-right{
+    border-left: solid white;
+    border-bottom: solid white;
+}
+
+.top-center{
+    border-bottom: solid white;
+}
+
+.center-left{
+    border-right: solid white;
+}
+
+.center-right{
+    border-left: solid white;
+}
+
+.bottom-left{
+    border-top: solid white;
+    border-right: solid white;
+}
+
+.bottom-center{
+    border-top: solid white;
+    border-right: solid white;
+}
+
+.bottom-right{
+    border-top: solid white;
+}
+
+div{
+    color: grey;
+}
