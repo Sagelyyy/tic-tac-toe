@@ -8,6 +8,15 @@ body{
     margin-right: 32%;
 }
 
+.playerForm{
+    float: left;
+    color: blue;
+    font-size: 60px;
+    margin-left: 5%;
+    font-family: 'Press Start 2P';
+    width: 500px;
+}
+
 .flex-row {
     display: inline-flex;
     justify-content: center;
