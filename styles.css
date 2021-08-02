@@ -8,6 +8,12 @@ body{
     margin-right: 32%;
 }
 
+.winner-declare{
+    color: red;
+    font-family: 'Press Start 2P';
+    font-size: 60px;
+}
+
 .playerForm{
     float: left;
     color: blue;
