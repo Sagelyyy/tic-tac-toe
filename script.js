@@ -10,43 +10,82 @@ const GAMEBOARD = (function(){
         let player1Name = PLAYERS.getPlayerName(0)
         let player2Name = PLAYERS.getPlayerName(1)
         for(i = 0; i < 8; i++){
-            if(board[0] == 'X' && board[1] == 'X' && board[2] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
-            if(board[3] == 'X' && board[4] == 'X' && board[5] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
-            if(board[6] == 'X' && board[7] == 'X' && board[8] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
-            if(board[0] == 'X' && board[4] == 'X' && board[6] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
-            if(board[1] == 'X' && board[5] == 'X' && board[7] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
-            if(board[2] == 'X' && board[6] == 'X' && board[8] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
-            if(board[0] == 'X' && board[4] == 'X' && board[8] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
-            if(board[2] == 'X' && board[4] == 'X' && board[6] == 'X')
-            winnerText.textContent = `${player1Name} wins!`
+            if(board[0] == 'X' && board[1] == 'X' && board[2] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
+            if(board[3] == 'X' && board[4] == 'X' && board[5] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
+            if(board[6] == 'X' && board[7] == 'X' && board[8] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
+            if(board[0] == 'X' && board[4] == 'X' && board[6] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
+            if(board[1] == 'X' && board[5] == 'X' && board[7] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
+            if(board[2] == 'X' && board[6] == 'X' && board[8] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
+            if(board[0] == 'X' && board[4] == 'X' && board[8] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
+            if(board[2] == 'X' && board[4] == 'X' && board[6] == 'X'){
+                winnerText.style.color = 'red'
+                winnerText.textContent = `${player2Name} wins!`
+            }
         }
         for(i = 0; i < 8; i++){
-            if(board[0] == 'O' && board[1] == 'O' && board[2] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
-            if(board[3] == 'O' && board[4] == 'O' && board[5] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
-            if(board[6] == 'O' && board[7] == 'O' && board[8] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
-            if(board[0] == 'O' && board[4] == 'O' && board[6] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
-            if(board[1] == 'O' && board[5] == 'O' && board[7] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
-            if(board[2] == 'O' && board[6] == 'O' && board[8] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
-            if(board[0] == 'O' && board[4] == 'O' && board[8] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
-            if(board[2] == 'O' && board[4] == 'O' && board[6] == 'O')
-            winnerText.textContent = `${player2Name} wins!`
+            if(board[0] == 'O' && board[1] == 'O' && board[2] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
+            if(board[3] == 'O' && board[4] == 'O' && board[5] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
+            if(board[6] == 'O' && board[7] == 'O' && board[8] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
+            if(board[0] == 'O' && board[4] == 'O' && board[6] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
+            if(board[1] == 'O' && board[5] == 'O' && board[7] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
+            if(board[2] == 'O' && board[6] == 'O' && board[8] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
+            if(board[0] == 'O' && board[4] == 'O' && board[8] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
+            if(board[2] == 'O' && board[4] == 'O' && board[6] == 'O'){
+                winnerText.style.color = 'blue'
+                winnerText.textContent = `${player1Name} wins!`
+            }
         }
     }
-
+    function colorBoard(){
+        const tiles = document.querySelectorAll('.item')
+        for(i=0;i<tiles.length;i++){
+            if(tiles[i].textContent == 'X'){
+                tiles[i].style.color == 'red'
+            }
+        }
+    }
     const boardSetup = () =>{
         const tiles = document.querySelectorAll('.item')
         tiles.forEach(
@@ -57,6 +96,7 @@ const GAMEBOARD = (function(){
                         e.target.textContent != 'O'){
                         turn = PLAYERS.playerTurn()
                         e.target.textContent = turn
+                        colorBoard()
                         console.log(e.target.textContent)
                         PLAYERS.setPlayerSymbols()
                         switch(e.target.id){
@@ -171,6 +211,7 @@ const PLAYERS = (function(){
         let pPlayer2ID = getPlayerSymbol(1)
         pPlayer1.textContent = `${pArray[0]}: ${pPlayer1ID}`
         if(pArray.length > 1){
+            pPlayer2.style.color = 'red'
             pPlayer2.textContent = `${pArray[1]}: ${pPlayer2ID}`
         }
     }
