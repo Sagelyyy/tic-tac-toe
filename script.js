@@ -204,9 +204,7 @@ const GAMEBOARD = (function(){
 
     return{
         boardSetup,
-        boardReset,
-        board,
-        checkGameState
+        boardReset
     }
 })();
 
@@ -316,12 +314,8 @@ const PLAYERS = (function(){
     }
     return{
         createPlayer,
-        getPlayerSymbol,
-        getPlayerTurn,
         playerTurn,
         setPlayerSymbols,
-        showPlayers,
-        getPlayerNames,
         getPlayerName,
         resetPlayers,
         playersLength,
