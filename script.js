@@ -103,13 +103,10 @@ const GAMEBOARD = (function(){
 
     function endGame(){
         PLAYERS.resetPlayers()
-        let container = document.querySelector('.winner-info')
-        let newGame = document.createElement('button')
-        newGame.setAttribute('type', 'button')
-        newGame.className = 'new-game'
-        newGame.innerText = 'New Game?'
-        container.appendChild(newGame)
-        newGame.setAttribute('onclick', 'GAMEBOARD.boardReset()')
+        let winnerText = document.querySelector('.winner-declare')
+        let newGame = document.querySelector('.new-game')
+        winnerText.style.visibility = "visible"
+        newGame.style.visibility = "visible"
     }
 
     function colorBoard(){
@@ -124,6 +121,11 @@ const GAMEBOARD = (function(){
         }
     }
     const boardSetup = () =>{
+        PLAYERS.resetPlayers()
+        let winnerText = document.querySelector('.winner-declare')
+        let newGame = document.querySelector('.new-game')
+        winnerText.style.visibility = "hidden"
+        newGame.style.visibility = "hidden"
 
         const tiles = document.querySelectorAll('.item')
         tiles.forEach(
@@ -178,15 +180,15 @@ const GAMEBOARD = (function(){
     }
 
     const boardReset = () => {
-        let container = document.querySelector('.winner-info')
         let newGame = document.querySelector('.new-game')
         let winnerText = document.querySelector('.winner-declare')
         let p1Text = document.querySelector('.player1')
         let p2Text = document.querySelector('.player2')
-        winnerText.textContent = ''
+        winnerText.style.visibility = "hidden"
+        newGame.style.visibility = "hidden"
+        winnerText.textContent = 'Tie Game!'
         p1Text.textContent = ''
         p2Text.textContent = ''
-        container.removeChild(newGame)
         winState = false
         roundsLeft = 9
         for(i = 0; i< board.length; i++){
