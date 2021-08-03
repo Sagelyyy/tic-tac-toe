@@ -4,100 +4,138 @@ const GAMEBOARD = (function(){
         [null],[null],[null],
         [null],[null],[null]
     ];
+    let roundsLeft = 9
+    let winState = false
 
     function checkGameState() {
         let winnerText = document.querySelector('.winner-declare')
         let player1Name = PLAYERS.getPlayerName(0)
         let player2Name = PLAYERS.getPlayerName(1)
-        for(i = 0; i < 8; i++){
-            if(board[0] == 'X' && board[1] == 'X' && board[2] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
+            for(i = 0; i < 8; i++){
+                if(board[0] == 'X' && board[1] == 'X' && board[2] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
+                if(board[3] == 'X' && board[4] == 'X' && board[5] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
+                if(board[6] == 'X' && board[7] == 'X' && board[8] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
+                if(board[0] == 'X' && board[3] == 'X' && board[6] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
+                if(board[1] == 'X' && board[4] == 'X' && board[7] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
+                if(board[2] == 'X' && board[6] == 'X' && board[8] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
+                if(board[0] == 'X' && board[4] == 'X' && board[8] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
+                if(board[2] == 'X' && board[4] == 'X' && board[6] == 'X'){
+                    winnerText.style.color = 'red'
+                    winnerText.textContent = `${player2Name} wins!`
+                    winState = true
+                }
             }
-            if(board[3] == 'X' && board[4] == 'X' && board[5] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
+            for(i = 0; i < 8; i++){
+                if(board[0] == 'O' && board[1] == 'O' && board[2] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
+                if(board[3] == 'O' && board[4] == 'O' && board[5] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
+                if(board[6] == 'O' && board[7] == 'O' && board[8] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
+                if(board[0] == 'O' && board[3] == 'O' && board[6] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
+                if(board[1] == 'O' && board[4] == 'O' && board[7] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
+                if(board[2] == 'O' && board[6] == 'O' && board[8] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
+                if(board[0] == 'O' && board[4] == 'O' && board[8] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
+                if(board[2] == 'O' && board[4] == 'O' && board[6] == 'O'){
+                    winnerText.style.color = 'blue'
+                    winnerText.textContent = `${player1Name} wins!`
+                    winState = true
+                }
             }
-            if(board[6] == 'X' && board[7] == 'X' && board[8] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
-            }
-            if(board[0] == 'X' && board[4] == 'X' && board[6] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
-            }
-            if(board[1] == 'X' && board[5] == 'X' && board[7] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
-            }
-            if(board[2] == 'X' && board[6] == 'X' && board[8] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
-            }
-            if(board[0] == 'X' && board[4] == 'X' && board[8] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
-            }
-            if(board[2] == 'X' && board[4] == 'X' && board[6] == 'X'){
-                winnerText.style.color = 'red'
-                winnerText.textContent = `${player2Name} wins!`
-            }
-        }
-        for(i = 0; i < 8; i++){
-            if(board[0] == 'O' && board[1] == 'O' && board[2] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
-            if(board[3] == 'O' && board[4] == 'O' && board[5] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
-            if(board[6] == 'O' && board[7] == 'O' && board[8] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
-            if(board[0] == 'O' && board[4] == 'O' && board[6] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
-            if(board[1] == 'O' && board[5] == 'O' && board[7] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
-            if(board[2] == 'O' && board[6] == 'O' && board[8] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
-            if(board[0] == 'O' && board[4] == 'O' && board[8] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
-            if(board[2] == 'O' && board[4] == 'O' && board[6] == 'O'){
-                winnerText.style.color = 'blue'
-                winnerText.textContent = `${player1Name} wins!`
-            }
+        --roundsLeft
+        if(roundsLeft == 0 || winState == true){
+            endGame()
         }
     }
+
+    function endGame(){
+        PLAYERS.resetPlayers()
+        let container = document.querySelector('.winner-info')
+        let newGame = document.createElement('button')
+        newGame.setAttribute('type', 'button')
+        newGame.className = 'new-game'
+        newGame.innerText = 'New Game?'
+        container.appendChild(newGame)
+        newGame.setAttribute('onclick', 'GAMEBOARD.boardReset()')
+    }
+
     function colorBoard(){
         const tiles = document.querySelectorAll('.item')
         for(i=0;i<tiles.length;i++){
             if(tiles[i].textContent == 'X'){
-                tiles[i].style.color == 'red'
+                tiles[i].style.color = 'red'
+            }
+            if(tiles[i].textContent == 'O'){
+                tiles[i].style.color = 'blue'
             }
         }
     }
     const boardSetup = () =>{
+
         const tiles = document.querySelectorAll('.item')
         tiles.forEach(
             function(item){
                 item.addEventListener("click", (e)=>{
+                    pLength = PLAYERS.playersLength()
                     if(e.target != document.body &&
                         e.target.textContent != 'X' &&
-                        e.target.textContent != 'O'){
+                        e.target.textContent != 'O' &&
+                        pLength == 2){
                         turn = PLAYERS.playerTurn()
                         e.target.textContent = turn
-                        colorBoard()
-                        console.log(e.target.textContent)
                         PLAYERS.setPlayerSymbols()
                         switch(e.target.id){
                             case '0,0':
@@ -129,7 +167,10 @@ const GAMEBOARD = (function(){
                                 break;    
 
                         }
-                        checkGameState()
+                        colorBoard()
+                            if(winState == false){
+                                checkGameState()
+                            }
                     }
 
                 })
@@ -137,6 +178,17 @@ const GAMEBOARD = (function(){
     }
 
     const boardReset = () => {
+        let container = document.querySelector('.winner-info')
+        let newGame = document.querySelector('.new-game')
+        let winnerText = document.querySelector('.winner-declare')
+        let p1Text = document.querySelector('.player1')
+        let p2Text = document.querySelector('.player2')
+        winnerText.textContent = ''
+        p1Text.textContent = ''
+        p2Text.textContent = ''
+        container.removeChild(newGame)
+        winState = false
+        roundsLeft = 9
         for(i = 0; i< board.length; i++){
             board[i] = null
         }
@@ -159,7 +211,16 @@ const GAMEBOARD = (function(){
 
 const PLAYERS = (function(){ 
     _players = [];
-    const symbolArray = ["X", "O"]
+    let symbolArray = ["X", "O"]
+
+    function resetPlayers(){
+        _players.length = 0
+        symbolArray = ["X", "O"]
+    }
+
+    function playersLength(){
+        return _players.length
+    }
 
     const createPlayer = () =>{
         pName = document.querySelector('.playerInput').value
@@ -259,7 +320,9 @@ const PLAYERS = (function(){
         setPlayerSymbols,
         showPlayers,
         getPlayerNames,
-        getPlayerName
+        getPlayerName,
+        resetPlayers,
+        playersLength,
     }
 })();
 

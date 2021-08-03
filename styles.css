@@ -14,6 +14,35 @@ body{
     font-size: 60px;
 }
 
+.new-game{
+    width: 35%;
+    height: 40px;
+    background-color: #FFF02A;
+    border: none;
+    border-radius: 10px;
+}
+
+.new-game:hover{
+    width: 35%;
+    height: 40px;
+    background-color: #a89f1a;
+    border: none;
+    border-radius: 10px;
+}
+
+.submit-player{
+    width: 25%;
+    height: 20px;
+    background-color: #FFF02A;
+    border: none;
+    border-radius: 10px;
+}
+
+input{
+    border-radius: 2px;
+}
+
+
 .playerForm{
     float: left;
     color: blue;
